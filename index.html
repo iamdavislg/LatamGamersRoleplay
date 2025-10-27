@@ -181,7 +181,7 @@ body{margin:0;background:linear-gradient(180deg,var(--bg-1),var(--bg-2));color:#
         <article id="actos-robo">
           <h3>Robo a negocios</h3>
           <p>
-1. Robo a negocios
+**1. Robo a negocios**
 Este tipo de actividad delictiva se reserva exclusivamente para miembros de las bandas. Es imprescindible que los usuarios respeten el entorno del negocio establecido por el usuario propietario del establecimiento.
 
 Se solicita a los usuarios que reporten cualquier infracción a las normas al finalizar el robo, ya sea dentro del juego o mediante tickets de soporte. Además, es esencial llevar a cabo una fase previa de planificación, donde se identifiquen objetivos, se especifique el botín esperado y se planifique la ruta de escape. Aunque no se requieren tantas capturas de este proceso de planificación, es crucial tener evidencia del mismo.
@@ -201,7 +201,7 @@ Ambos bandos involucrados en el robo deben tener evidencia de cuando solicitan r
         <article id="actos-corrupcion">
           <h3>Roles de corrupción</h3>
           <p>
-2. Roles de corrupción
+2. **Roles de corrupción**
 Infringir las normativas relacionadas con el comportamiento corrupto conlleva una sanción de encarcelamiento fuera del personaje (Out Of Character) y, en casos graves, el bloqueo permanente de la cuenta del infractor.
 
 Para participar en un rol de corrupción, se requiere que el jugador respalde el comportamiento de su personaje con una biografía u historia coherente, así como un motivo válido para justificar su corrupción.
@@ -494,40 +494,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-<!-- Botón de música flotante -->
-<div id="music-control">
-  <button id="music-btn" title="Activar música">🎧</button>
-</div>
-
-<!-- Reproductor de música -->
-<audio id="bg-music" loop>
-  <source src="assets/musica.mp3" type="audio/mpeg">
-  Tu navegador no soporta audio HTML5.
-</audio>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("music-btn");
-  const music = document.getElementById("bg-music");
-  let playing = false;
-
-  btn.addEventListener("click", () => {
-    if (!playing) {
-      music.volume = 0.6;
-      music.play().then(() => {
-        btn.textContent = "🔇";
-        btn.title = "Detener música";
-      }).catch(err => console.log(err));
-    } else {
-      music.pause();
-      btn.textContent = "🎧";
-      btn.title = "Activar música";
-    }
-    playing = !playing;
-  });
 });
 </script>
-
+</body>
+</html>
 </body>
 </html>
