@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>LatamGamers Roleplay - Normativas</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+:root{
+  --bg-1:#06030a; --bg-2:#0b0613; --primary:#7c3aed; --primary-2:#a78bfa;
+  --muted:#9aa4b2; --card-bg:rgba(255,255,255,0.02); --radius:14px; --max-width:1100px;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,var(--bg-1),var(--bg-2));color:#eaeaf2;-webkit-font-smoothing:antialiased}
+.particles-bg{position:fixed;inset:0;z-index:0;pointer-events:none}
+.container{max-width:var(--max-width);margin:0 auto;padding:26px;position:relative;z-index:3}
+.site-header{position:sticky;top:0;z-index:10;backdrop-filter:blur(8px);background:linear-gradient(180deg, rgba(6,3,10,0.6), rgba(6,3,10,0.3));border-bottom:1px solid rgba(255,255,255,0.03);box-shadow:0 10px 30px rgba(124,58,237,0.16)}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;gap:12px;align-items:center}
+.logo-img{width:56px;height:56px;object-fit:contain;border-radius:10px;box-shadow:0 8px 28px rgba(124,58,237,0.22)}
+.brand-title{font-weight:700;font-size:15px;color:#efeaff}
+.brand-sub{font-size:11px;color:var(--muted)}
+.main-nav{display:flex;gap:18px;align-items:center}
+.main-nav a{color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:8px;font-weight:600;font-size:14px;transition:all .22s}
+.main-nav a:hover{color:#fff;background:rgba(255,255,255,0.02);text-shadow:0 0 8px rgba(167,92,255,0.08)}
+.btn.primary{background:linear-gradient(90deg,var(--primary),var(--primary-2));color:white;padding:8px 16px;border-radius:12px;box-shadow:0 8px 28px rgba(124,58,237,0.18)}
+
+/* dropdown */
+.dropdown{position:relative;display:inline-block}
+.dropbtn{background:transparent;border:none;color:var(--muted);font-weight:700;padding:6px 10px;cursor:pointer;display:flex;align-items:center;gap:6px}
+.dropdown .dropdown-menu{position:absolute;left:0;top:calc(100% + 8px);min-width:320px;background:linear-gradient(180deg, rgba(12,6,20,0.96), rgba(10,6,18,0.94));border-radius:12px;padding:14px;box-shadow:0 18px 50px rgba(7,3,20,0.6);border:1px solid rgba(255,255,255,0.03);opacity:0;visibility:hidden;transform:translateY(6px);transition:all .22s;z-index:40}
+.dropdown:hover .dropdown-menu, .dropdown.open .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.menu-group{margin-bottom:8px;list-style:none;padding:0}
+.group-title{display:block;font-weight:800;color:#efeaff;margin-bottom:6px;font-size:13px}
+.dropdown .menu-group ul{padding-left:8px;margin:0}
+.dropdown a{color:var(--muted);text-decoration:none;display:block;padding:6px 8px;border-radius:8px;font-weight:600}
+.dropdown a:hover{color:#fff;background:rgba(255,255,255,0.02);box-shadow:0 8px 24px rgba(124,58,237,0.08)}
+.caret{font-size:12px;color:var(--muted)}
+
+/* main grid */
+.main-grid{display:grid;grid-template-columns:1fr 360px;gap:26px;align-items:start;margin-top:28px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));border-radius:var(--radius);padding:20px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+.hero-card h1{font-size:28px;margin:0 0 6px;color:#fff}
+.lead{color:var(--muted);margin-top:6px}
+.actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+.pill{background:rgba(255,255,255,0.03);padding:10px 14px;border-radius:999px;color:#fff;text-decoration:none;font-weight:700}
+.pill.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04)}
+
+/* stats */
+.stats{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
+.stat{flex:1;min-width:110px;background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;text-align:center}
+.num{font-weight:800;font-size:18px}
+.label{font-size:12px;color:var(--muted);margin-top:6px}
+
+/* normatives content */
+#normativas-content{margin-top:18px;display:grid;gap:12px}
+#normativas-content article{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+#normativas-content h3{margin:0 0 8px 0;color:#f6edff}
+#normativas-content p{color:#e7e2f9;white-space:pre-wrap}
+
+/* footer */
+.site-footer{margin-top:40px;padding:22px 0;border-top:1px solid rgba(255,255,255,0.02)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.footer-right a{margin-left:12px;color:var(--muted);text-decoration:none;font-weight:600}
+.footer-right a:hover{color:var(--primary-2);text-shadow:0 0 8px rgba(167,92,255,0.06)}
+
+/* responsive */
+@media (max-width:1000px){.main-grid{grid-template-columns:1fr}.main-nav{display:none}.container{padding:18px}}
+</style>
+</head>
+<body>
+  <div id="tsparticles" class="particles-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/logo_128.png" alt="LatamGamers Logo" class="logo-img">
+        <div>
+          <div class="brand-title">LatamGamers</div>
+          <div class="brand-sub">Servidor SA-MP Roleplay</div>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="#">INICIO</a>
+        <a href="#">TIENDA</a>
+        <a href="#">TOP'S</a>
+        <a class="btn primary" href="#">DESCARGAR</a>
+
+        <div class="dropdown">
+          <button class="dropbtn" id="drop-norm">NORMATIVAS <span class="caret">▾</span></button>
+          <ul class="dropdown-menu" aria-labelledby="drop-norm">
+            <li class="menu-group">
+              <span class="group-title">Actos delictivos</span>
+              <ul>
+                <li><a href="#actos-robo">Robo a negocios</a></li>
+                <li><a href="#actos-corrupcion">Roles de corrupción</a></li>
+                <li><a href="#actos-hurtos">Hurtos, robos y /cartera</a></li>
+                <li><a href="#actos-gran-escala">Robos a gran escala fuera de zonas negras</a></li>
+                <li><a href="#actos-estafas">Estafas</a></li>
+                <li><a href="#actos-secuestros">Secuestros</a></li>
+              </ul>
+            </li>
+
+            <li class="menu-group">
+              <span class="group-title">Armas</span>
+              <ul>
+                <li><a href="#armas-requisitos">Requisitos mínimos para portar armas</a></li>
+                <li><a href="#armas-extraccion">Extracción de armas</a></li>
+                <li><a href="#armas-alto-calibre">Armas de alto calibre</a></li>
+                <li><a href="#armas-venta">Venta de armamento</a></li>
+                <li><a href="#armas-degollamiento">Degollamiento con arma blanca</a></li>
+              </ul>
+            </li>
+
+            <li class="menu-group">
+              <span class="group-title">Zonas</span>
+              <ul>
+                <li><a href="#zonas-seguras">Zonas negras y seguras</a></li>
+                <li><a href="#zonas-avisos">Avisos del entorno</a></li>
+              </ul>
+            </li>
+
+            <li class="menu-group">
+              <span class="group-title">Rol Ofensivo</span>
+              <ul>
+                <li><a href="#rol-ofensivo">Normativa Rol Ofensivo</a></li>
+              </ul>
+            </li>
+
+            <li class="menu-group">
+              <span class="group-title">Personaje</span>
+              <ul>
+                <li><a href="#personaje">Reglas de Personaje</a></li>
+              </ul>
+            </li>
+
+            <li class="menu-group">
+              <span class="group-title">Modificaciones</span>
+              <ul>
+                <li><a href="#modificaciones">Modificaciones externas</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <a href="https://discord.gg/FF5SK3eXQw" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i> DISCORD</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section class="card hero-card animate">
+      <h1>Bienvenido a LatamGamers Roleplay</h1>
+      <p class="lead">Vive tu segunda vida en el mejor servidor de SA-MP. ¡Explora, rolea y diviértete!</p>
+
+      <div class="actions">
+        <a class="pill" href="https://discord.gg/FF5SK3eXQw" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i> Unirse al Discord</a>
+        <a class="pill ghost" href="#">Descargar Launcher</a>
+      </div>
+
+      <h3>Estadísticas</h3>
+      <div class="stats">
+        <div class="stat"><div class="num">Próximamente</div><div class="label">Usuarios</div></div>
+        <div class="stat"><div class="num">+3.5K</div><div class="label">Miembros en Discord</div></div>
+        <div class="stat"><div class="num">Próximamente</div><div class="label">Eventos</div></div>
+      </div>
+
+      <h3>Noticias</h3>
+      <div class="news-list">
+        <article class="news-item"><h4>Evento Halloween 2025</h4><p>¡Disfruta la nueva actualización con recompensas especiales!</p></article>
+        <article class="news-item"><h4>Versión 2.3 del Launcher</h4><p>Más estable y rápido. Disponible ahora en Descargas.</p></article>
+      </div>
+
+      <!-- Normativas completas -->
+      <div id="normativas-content">
+        <article id="actos-robo">
+          <h3>Robo a negocios</h3>
+          <p>
+1. Robo a negocios
+Este tipo de actividad delictiva se reserva exclusivamente para miembros de las bandas. Es imprescindible que los usuarios respeten el entorno del negocio establecido por el usuario propietario del establecimiento.
+
+Se solicita a los usuarios que reporten cualquier infracción a las normas al finalizar el robo, ya sea dentro del juego o mediante tickets de soporte. Además, es esencial llevar a cabo una fase previa de planificación, donde se identifiquen objetivos, se especifique el botín esperado y se planifique la ruta de escape. Aunque no se requieren tantas capturas de este proceso de planificación, es crucial tener evidencia del mismo.
+
+Los ladrones pueden estar acompañados por individuos que no pertenezcan a su grupo durante la comisión del robo. No se permite asaltar negocios donde se estén llevando a cabo eventos por parte de los civiles, como fiestas u otros eventos programados.
+
+Durante el asalto, los delincuentes deben portar armas de fuego, mientras que otros usuarios pueden utilizar armas de fuego de calibre inferior o armas blancas. Se debe iniciar el robo con un rol adecuado que incluya la interacción con los NPCs del establecimiento y la realización de amenazas. El número mínimo de usuarios en el robo es de 1, mientras que el máximo es de 5.
+
+Se requiere un mínimo de tres (3) oficiales para intervenir en el robo. Una vez iniciado el asalto, el delincuente no está obligado a esperar la llegada de las autoridades y puede optar por escapar si tiene la oportunidad.
+
+En caso de que se tome un rehén durante el robo, el monto máximo a negociar por su liberación es de $50.000. Sin embargo, la negociación no se limita únicamente a dinero, y se permite cierta libertad de rol para los usuarios. Los rehenes no pueden ser actores ni miembros de la propia familia de los delincuentes.
+
+Ambos bandos involucrados en el robo deben tener evidencia de cuando solicitan refuerzos para mantener la transparencia y la equidad en el juego.
+          </p>
+        </article>
+
+        <article id="actos-corrupcion">
+          <h3>Roles de corrupción</h3>
+          <p>
+2. Roles de corrupción
+Infringir las normativas relacionadas con el comportamiento corrupto conlleva una sanción de encarcelamiento fuera del personaje (Out Of Character) y, en casos graves, el bloqueo permanente de la cuenta del infractor.
+
+Para participar en un rol de corrupción, se requiere que el jugador respalde el comportamiento de su personaje con una biografía u historia coherente, así como un motivo válido para justificar su corrupción.
+
+La aprobación del rol por parte de un Administrador y del líder de la facción es esencial, y deben proporcionar una justificación coherente para el comportamiento corrupto del usuario. Además, se establece como requisito que el usuario tenga un nivel mínimo de cinco (5) en el servidor y no haya recibido sanciones administrativas previas.
+
+Solo se otorga autorización para llevar a cabo roles de corrupción a los miembros de la facción que ostenten un rango igual o superior a cinco (5) y hayan sido parte de la facción durante al menos un dos semanas. Estas medidas garantizan un entorno de juego equitativo y una narrativa coherente en el desarrollo de rol de corrupción.
+          </p>
+        </article>
+
+        <article id="actos-hurtos">
+          <h3>Hurtos, robos y /cartera</h3>
+          <p>
+Los hurtos solo pueden llevarse a cabo si tanto el ladrón como la víctima poseen nivel dos (2) mínimo.
+Si el robo es vía rol y no mediante /cartera, el monto sustraído no debe exceder de $15.000.
+
+Está permitido hurtar un vehículo con la intención de solicitar una recompensa o para usos ilícitos, no está permitido forzar al usuario a transferir la propiedad del vehículo o cualquier patrimonio.
+          </p>
+        </article>
+
+        <article id="actos-gran-escala">
+          <h3>Robos a gran escala fuera de zonas negras</h3>
+          <p>
+Fuera de zonas negras, queda estrictamente prohibido llevar a cabo atentados a gran escala, como actos terroristas, la detonación de vehículos cargados de explosivos, el uso de dinamita (fuera del robo de casa) o la propagación de virus infecciosos por parte de los usuarios.
+
+Cualquier acción que resulte en un genocidio será sancionada, a menos que se cuente con una autorización previa de un administrador.
+          </p>
+        </article>
+
+        <article id="actos-estafas">
+          <h3>Estafas</h3>
+          <p>
+Las estafas son actos que requieren un cierto nivel de habilidad y experiencia en el servidor. Para llevar a cabo una estafa de manera legítima, tanto la víctima como el estafador deben tener un nivel mínimo de (3) dentro del juego, lo que garantiza un conocimiento básico de las dinámicas y normativas del entorno. Además, se establece un límite máximo de $200.000 para el monto de la estafa, lo que asegura que las transacciones fraudulentas se mantengan dentro de límites razonables.
+
+Es importante destacar que queda estrictamente prohibido estafar activos de alto valor, como propiedades o vehículos. Esta medida busca proteger los activos más significativos de los jugadores y mantener un ambiente de juego justo y equilibrado para todos los participantes. Asimismo, se enfatiza que no se aceptará como excusa el argumento de que los documentos de pertenencia son falsos, ya que esto contradice directamente las normativas establecidas.
+
+En resumen, las estafas son acciones delicadas que requieren un nivel mínimo de habilidad y experiencia en el servidor, y deben llevarse a cabo dentro de límites específicos para garantizar la integridad y la equidad del juego para todos los usuarios.
+          </p>
+        </article>
+
+        <article id="actos-secuestros">
+          <h3>Secuestros</h3>
+          <p>
+En cuanto al secuestro, definido como el acto de trasladar a un individuo sin su consentimiento con el fin de obtener un rescate u otro beneficio, solo pueden realizarlo aquellos que tengan facción oficial y cuenten con motivos justificados para ello.
+
+Cualquier plan de secuestro debe ser comunicado previamente a un miembro del comité de rol, quien evaluará la preparación del mismo para decidir si se permite llevarlo a cabo.
+
+Es imprescindible recopilar documentación gráfica durante todo el desarrollo del rol.
+
+El Administrador o cualquier operador está en potestad de anular un rol.
+          </p>
+        </article>
+
+        <article id="armas-requisitos">
+          <h3>Requisitos mínimos para portar armas</h3>
+          <p>
+1. Requisitos mínimos para portar armas
+El porte y uso de armas de fuego está reservado únicamente para usuarios que hayan acumulado un mínimo de horas.
+
+Nivel 1:
+Cuchillo — Bate — Nudillera
+
+Nivel 2:
+9mm — 9mm silenciada — Desert Eagle
+
+Nivel 3:
+TEC9 — UZI — Escopeta — MP5
+
+Nivel 6:
+AK-47 — M4
+
+A partir de nivel seis (6) podrás utilizar todas las armas del juego.
+En consecuencia, cualquier usuario que sea detectado portando un arma sin haber alcanzado este requisito será bloqueado de inmediato por sospecha de cheats.
+Además, es importante destacar que una vez que los usuarios alcancen el requisito mínimo de horas de juego para portar armas, deberán adherirse estrictamente a las normativas de uso responsable de armamento establecidas por el servidor. Esto implica respetar las zonas designadas para el uso de armas, abstenerse de utilizarlas en situaciones no justificadas por el rol, y mantener un comportamiento acorde al contexto de juego de rol.
+          </p>
+        </article>
+
+        <article id="armas-extraccion">
+          <h3>Extracción de armas</h3>
+          <p>
+2. Extracción de armas
+No es necesario interpretar el acto de sacar un arma, debido a que el servidor realiza un rol automático y visible ante cualquier jugador cercano.
+Sin embargo, es crucial recordar que la extracción de armas debe realizarse de manera realista y coherente con el contexto del rol. Los jugadores deben abstenerse de sacar armas de manera irracional o sin justificación.
+Por lo tanto, se insta a los usuarios a interpretar sus acciones de forma realista y coherente con el personaje que están representando. Esto significa que, si un personaje desea sacar un arma, debería hacerlo de manera discreta y sigilosa, especialmente en situaciones donde la presencia de armas pueda ser considerada ilegal o provocativa.
+          </p>
+        </article>
+
+        <article id="armas-alto-calibre">
+          <h3>Armas de alto calibre</h3>
+          <p>
+3. Armas de alto calibre
+Las armas deben ser manejadas de manera responsable y discreta.
+Cuando sea necesario llevar armas de forma personal, se recomienda que estas sean visibles, preferiblemente colgadas en la espalda. Sin embargo, es importante recordar que exhibir armas de gran calibre en zonas seguras o intentar involucrarlas a un rol (dentro de zona segura) no está permitido.
+Está permitido exhibir estas armas en zonas negras o propias de tu organización (territorios).
+Cualquier jugador que sea visto portando un arma de gran calibre de esta manera será castigado.
+          </p>
+        </article>
+
+        <article id="armas-venta">
+          <h3>Venta de armamento</h3>
+          <p>
+4. Venta de armamento
+Se establece la prohibición de la venta de armas por parte de los cuerpos de autoridad a cualquier grupo ilegal o civil.
+Las armas suministradas para el uso cotidiano de los agentes de la ley, quienes están obligados a devolverlas al finalizar su turno para evitar complicaciones.
+La venta de armas resultará en sanciones tanto en el contexto del juego como fuera de él, dependiendo de la gravedad de la infracción. Queda explícitamente prohibido vender armas a grupos ilegales o civiles.
+Los usuarios comunes no están autorizados para hurtar o robar armas a oficiales de policía.
+Solo las facciones oficiales, con motivos legítimos y una interpretación adecuada del entorno, pueden realizar estas acciones.
+          </p>
+        </article>
+
+        <article id="armas-degollamiento">
+          <h3>Degollamiento con arma blanca</h3>
+          <p>
+5. Degollamiento con arma blanca
+En el escenario en el que se tenga en posesión un arma blanca y se tenga la intención de realizar un acto de degollamiento a otro usuario, se requiere realizar una representación detallada utilizando los comandos de rol correspondientes antes de proceder con la acción.
+La omisión de este proceso se considerará como forzamiento de rol.
+          </p>
+        </article>
+
+        <article id="zonas-seguras">
+          <h3>Zonas negras y seguras</h3>
+          <p>
+Zonas:
+Zonas negras y seguras
+Se define como zonas seguras a todas áreas que tienen prohibido realizar actos ilícitos, las zonas seguras están marcadas en el juego de color verde.
+
+Existen lugares que cuentan con alta seguridad, posiblemente fuerte atención policial, muchos ciudadanos, entre otras, estas zonas, definidas mas que nada por el entorno, podrían ser:
+
+Aeropuertos, estaciones de tren o campos de aviación.,
+Edificios gubernamentales, como un ayuntamiento o un hospital. (Las clínicas privadas están totalmente excluidas),
+Bancos o entidades de comisión de dinero.,
+Concesionarios donde se pueden comprar vehículos nuevos.,
+Tiendas de comercio legal de armamento.,
+Estaciones de organizaciones gubernamentales (comisaría, ayuntamiento, carceles, hospitales),
+Intersecciones importantes o autovías.,
+Existen áreas que limitan los atracos y secuestros, tienen que estar avisados y supervisados por un administrador.
+Sanción: Desde una advertencia verbal hasta un jail administrativo.
+          </p>
+        </article>
+
+        <article id="zonas-avisos">
+          <h3>Avisos del entorno</h3>
+          <p>
+Avisos del entorno
+El rol de entorno siempre debe ser neutral y acorde a las circunstancias.
+Por ejemplo, un robo en un callejón oscuro en la madrugada no ameritaría una llamada al 911.
+Además, tampoco está permitido rolear que por entorno los NPC atacarán o defenderán a alguien durante una situación.
+Se exige al usuario que guarde fotos de roles previos en caso de ser necesario.
+Fotos de rol se tomarán como válidas si presentan /timestamp y la /hora del servidor.
+          </p>
+        </article>
+
+        <article id="rol-ofensivo">
+          <h3>Rol Ofensivo</h3>
+          <p>
+ROLEPLAY OFENSIVO
+El propósito de este reglamento se incluye para que el usuario pueda experimentar un buen juego y estén cómodos dentro de la comunidad, cediendo una libertad durante el rol.
+
+Todo lo mencionado en esta normativa se incluye como “roleplay ofensivo”. Sin embargó, no prohíbe que no se permita realizar estos tipos de roles.
+
+El roleplay ofensivo incluye:
+
+Acoso o situaciones sexuales
+Tortura
+Desmembramiento
+Otros tipos de roles que puedan disgustar a otros jugadores
+
+Para llegar a realizar estos tipos de roles mencionados anteriormente, se tiene que pedir el consentimiento “OOC” del jugador antes de iniciar.
+
+Todo el roleplay ofensivo se tiene que realizar en zonas alejadas y poco pobladas, sí un administrador considera que es una zona demasiado pública, se estara incumplendo la normativa
+
+odos los jugadores que entran de manera consentida dentro de estos roles, se estara realizando mediante el consentimiento de esta normativa.
+
+Sí ocurren escenas donde los usuarios externos al rol, se muestran involucrados:
+
+Un jugador se encuentra incómodo o la realización es incorrecta, se puede cancelar el rol en cualquier momento, mediante la normativa de roles ofensivos.
+
+Un jugador, presencia una situación de rol ofensivo
+
+Sanción: Desde una advertencia verbal hasta el bloqueo de la cuenta
+          </p>
+        </article>
+
+        <article id="personaje">
+          <h3>Personaje</h3>
+          <p>
+1. Personaje
+Deben crear un personaje con una historia coherente y un nombre apropiado para roleplay. La ficha debe contener datos básicos y una breve biografía que explique motivaciones.
+
+Recomendaciones:
+- Evitar nombres absurdos o invasivos.
+- Mantener coherencia entre la historia y las acciones dentro del juego.
+- Actualizar la ficha si hay cambios significativos en el personaje.
+
+(Nota: pega aquí el resto de la normativa de 'Personaje' si quieres que lo formatee exactamente como el original.)
+          </p>
+        </article>
+
+        <article id="modificaciones">
+          <h3>Modificaciones externas</h3>
+          <p>
+Modificaciones externas
+Cualquier modificación en el juego quedará totalmente prohibida si demuestra un beneficio para el usuario.
+
+La modificación de un cliente para obtener un benefició también se considera una infracción de la normativa.
+
+Las únicas modificaciones permitidas son las que garanticen una modificación estética o visual y nunca pueden modificar la funcionalidad.
+
+Sanción: Bloqueo de cuenta
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <aside class="card sidebar-card animate">
+      <div class="panel">
+        <div class="panel-title">Descargar Launcher <span class="small muted">Windows • 64 bits</span></div>
+        <a class="btn download" href="#" download>Descargar</a>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">Estado del Servidor <span class="small muted">Última: ahora</span></div>
+        <div id="server-status" class="status status-off">Servidor Offline</div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">© <span id="year"></span> LatamGamers Roleplay — Todos los derechos reservados.</div>
+      <div class="footer-right">
+        <a href="https://discord.gg/FF5SK3eXQw" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i> Discord</a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i> YouTube</a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+<script>
+// año
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// simula estado servidor
+setTimeout(()=> {
+  const s = document.getElementById('server-status');
+  if(s){ s.classList.remove('status-off'); s.classList.add('status-on'); s.textContent = 'Servidor Online'; }
+}, 1500);
+
+// tsParticles init
+window.addEventListener('load', async () => {
+  if(!window.tsParticles) return;
+  await tsParticles.load("tsparticles", {
+    fpsLimit: 60,
+    background: { color: { value: "" } },
+    fullScreen: { enable: false },
+    detectRetina: true,
+    interactivity: {
+      events: { onHover: { enable: true, mode: "repulse" }, onClick: { enable: true, mode: "push" }, resize: true },
+      modes: { repulse: { distance:120, duration:0.6 }, push: { quantity:3 } }
+    },
+    particles: {
+      number: { value:40, density: { enable:true, area:800 } },
+      color: { value: ["#7c3aed","#a78bfa","#d6b8ff"] },
+      shape: { type: "circle" },
+      opacity: { value:0.78, random: { enable:true, minimumValue:0.35 } },
+      size: { value: { min:1.5, max:6 } },
+      move: { enable:true, speed:0.9, random:true, outModes:{ default:"out" } },
+      links: { enable:true, distance:140, color:"#8a5bff", opacity:0.09, width:1 }
+    }
+  });
+});
+
+// dropdown mobile toggle & smooth scroll
+document.addEventListener('DOMContentLoaded', () => {
+  const drop = document.querySelector('.dropdown');
+  const btn = document.getElementById('drop-norm');
+
+  btn && btn.addEventListener('click', (e) => { e.preventDefault(); drop.classList.toggle('open'); });
+
+  document.addEventListener('click', (e) => { if(!drop.contains(e.target)) drop.classList.remove('open'); });
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e){
+      const targetId = this.getAttribute('href');
+      if(targetId.length > 1){
+        e.preventDefault();
+        const target = document.querySelector(targetId);
+        if(target){ target.scrollIntoView({ behavior: 'smooth', block: 'start' }); if(drop) drop.classList.remove('open'); }
+      }
+    });
+  });
+
+<!-- Botón de música flotante -->
+<div id="music-control">
+  <button id="music-btn" title="Activar música">🎧</button>
+</div>
+
+<!-- Reproductor de música -->
+<audio id="bg-music" loop>
+  <source src="assets/musica.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio HTML5.
+</audio>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("music-btn");
+  const music = document.getElementById("bg-music");
+  let playing = false;
+
+  btn.addEventListener("click", () => {
+    if (!playing) {
+      music.volume = 0.6;
+      music.play().then(() => {
+        btn.textContent = "🔇";
+        btn.title = "Detener música";
+      }).catch(err => console.log(err));
+    } else {
+      music.pause();
+      btn.textContent = "🎧";
+      btn.title = "Activar música";
+    }
+    playing = !playing;
+  });
+});
+</script>
+
+</body>
+</html>
