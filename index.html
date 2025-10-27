@@ -495,41 +495,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-  <!-- Botón de música flotante -->
-<div id="music-control">
-  <button id="music-btn" title="Activar música">🎧</button>
-</div>
-
-<!-- Reproductor de música -->
-<audio id="bg-music" loop>
-  <source src="assets/musica.mp3" type="audio/mpeg">
-  Tu navegador no soporta audio HTML5.
-</audio>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("music-btn");
-  const music = document.getElementById("bg-music");
-  let playing = false;
-
-  btn.addEventListener("click", () => {
-    if (!playing) {
-      music.volume = 0.6;
-      music.play().then(() => {
-        btn.textContent = "🔇";
-        btn.title = "Detener música";
-      }).catch(err => console.log(err));
-    } else {
-      music.pause();
-      btn.textContent = "🎧";
-      btn.title = "Activar música";
-    }
-    playing = !playing;
-  });
-});
-
 </script>
-</body>
-</html>
 </body>
 </html>
