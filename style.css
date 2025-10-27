@@ -1,0 +1,83 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body,html{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  font-family:'Inter',sans-serif;
+  background:#050014;
+  color:#fff;
+}
+canvas#particles{
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  z-index:0;
+}
+header{
+  position:relative;
+  z-index:2;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.logo{
+  width:130px;
+  height:auto;
+  margin-bottom:20px;
+  filter:drop-shadow(0 0 20px rgba(150,80,255,0.6));
+}
+h1{
+  font-size:70px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-shadow:0 0 25px rgba(164,88,255,0.9);
+}
+.buttons{
+  margin-top:40px;
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.btn{
+  text-decoration:none;
+  font-weight:700;
+  font-size:18px;
+  padding:15px 35px;
+  border-radius:50px;
+  transition:all .25s ease;
+}
+.play{
+  background:linear-gradient(90deg,#7c3aed,#a855f7);
+  color:#fff;
+  box-shadow:0 0 20px rgba(160,90,255,0.6);
+}
+.play:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 30px rgba(160,90,255,0.9);
+}
+.discord{
+  background:#23272a;
+  color:#fff;
+  box-shadow:0 0 20px rgba(80,80,80,0.5);
+}
+.discord:hover{
+  background:#5865f2;
+  box-shadow:0 0 25px rgba(88,101,242,0.8);
+}
+footer{
+  position:absolute;
+  bottom:15px;
+  width:100%;
+  text-align:center;
+  font-size:14px;
+  color:#bbb;
+  z-index:2;
+}
+@media(max-width:600px){
+  h1{font-size:48px;}
+  .btn{font-size:16px;padding:12px 25px;}
+}
