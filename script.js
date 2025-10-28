@@ -1,6 +1,6 @@
 document.getElementById('playBtn').addEventListener('click', function(e){
   e.preventDefault();
-  const link = 'https://www.mediafire.com/file/okl0y0pddx60k3k/LatamGamers.exe/file';
+  const link = 'https://drive.google.com/file/d/1kL-9LzvP4S60ll_-T3D6_CqImm71T3LF/view?usp=drive_link';
   window.open(link, '_blank');
 });
 
