@@ -1,0 +1,99 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LatamGamers Roleplay</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="brand">
+        <img src="logo.png" alt="LatamGamers Logo" id="logo">
+        <div>
+          <h1>LatamGamers Roleplay</h1>
+          <div class="small">Servidor: <strong id="server-ip">144.217.19.104:7777</strong></div>
+        </div>
+      </div>
+      <nav>
+        <a href="#updates">Updates</a>
+        <a href="#tops">Tops</a>
+        <a href="#normas">Normativas</a>
+        <a href="#tienda">Tienda</a>
+        <a href="#descarga">Descargar</a>
+        <button class="btn" id="loginBtn">Iniciar sesión</button>
+      </nav>
+    </header>
+
+    <div class="top-row">
+      <div class="card">
+        <h2>Estado del servidor</h2>
+        <div class="server-status">
+          <div><span id="statusDot" class="status-dot status-offline"></span><span id="statusText">Desconocido</span></div>
+          <div class="small">Jugadores: <strong id="players">--</strong> | Ping: <strong id="ping">--</strong></div>
+          <div class="small">IP: <span id="ipDisplay">144.217.19.104:7777</span></div>
+          <div class="buttons">
+            <button class="btn" id="checkStatus">Comprobar estado</button>
+            <a class="btn primary" href="https://discord.gg/QCPevNnxHW" target="_blank">Ir al Discord</a>
+            <a class="btn" href="#tienda">Tienda (próximamente)</a>
+          </div>
+        </div>
+      </div>
+      <aside>
+        <div class="card">
+          <h2>Descarga</h2>
+          <p class="small">Cliente SA:MP y recursos</p>
+          <a class="btn primary" href="#descarga">Descargar cliente</a>
+          <a class="btn" href="#descarga">Paquete de recursos</a>
+        </div>
+        <div class="card">
+          <h2>Conéctate</h2>
+          <div class="links">
+            <a class="btn" href="https://discord.gg/QCPevNnxHW" target="_blank">Discord</a>
+            <a class="btn" href="#">Foro</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <main>
+      <section id="updates" class="card">
+        <h2>Últimas actualizaciones</h2>
+        <div id="updatesList" class="list"></div>
+      </section>
+
+      <aside class="card">
+        <h2 id="tops">Top jugadores</h2>
+        <div id="topsList" class="list"></div>
+        <h2>Normativas</h2>
+        <ol>
+          <li>Respeto entre jugadores.</li>
+          <li>No exploits ni cheats.</li>
+          <li>Prohibido el racismo y discriminación.</li>
+          <li>Sigue las indicaciones del staff.</li>
+        </ol>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© LatamGamers Roleplay - IP: 144.217.19.104:7777</div>
+    </footer>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="box">
+      <h3>Iniciar sesión</h3>
+      <input id="userName" placeholder="Usuario (nick)" />
+      <input id="userPass" placeholder="Contraseña" type="password" />
+      <div class="modal-buttons">
+        <button class="btn" id="closeModal">Cancelar</button>
+        <button class="btn primary" id="doLogin">Entrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
