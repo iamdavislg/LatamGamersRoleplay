@@ -1,9 +1,10 @@
+{
 const SERVER_IP = '144.217.19.104:7777';
 const nick = document.getElementById('userName').value || 'Jugador';
 localStorage.setItem('lg_user', nick);
 modal.classList.remove('open');
 alert('Sesión iniciada como: ' + nick + ' (simulado)');
-});
+}
 
 
 async function loadUpdates() {
