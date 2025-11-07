@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LatamGamers Roleplay</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- scroll suave para anclas -->
+  <style> html { scroll-behavior: smooth; } </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/logo.png" alt="LatamGamers" class="logo">
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#noticias">Noticias</a></li>
+          <li><a href="#estado">PCU</a></li>
+          <li><a href="#descargar">Descargar</a></li>
+          <li><a href="#normativas">Normativas</a></li>
+          <li><a href="https://discord.gg/QCPevNnxHW" target="_blank" rel="noopener">Discord</a></li>
+          <li><a href="#login" class="btn-login">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / INICIO -->
+  <section id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Heyy tu!!! <span class="accent">LatamGamers Roleplay 🔥 2.0 🔥 </span></h1>
+      <p class="sub">Que esperas? — Únete y vive la experiencia de estge grandioso Servidor</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#descargar" id="btn-download"> Descargar</a>
+        <a class="btn btn-ghost" href="https://discord.gg/QCPevNnxHW" target="_blank" rel="noopener">💬 Unirse al Discord</a>
+      </div>
+    </div>
+
+    <!-- fondo animado de puntos (canvas) -->
+    <canvas id="particles"></canvas>
+  </section>
+
+  <!-- NOTICIAS -->
+  <section id="noticias" class="section-dark">
+    <div class="container">
+      <h2>Noticias del Servidor</h2>
+      <p class="muted">Mantente al tanto de las últimas actualizaciones y eventos.</p>
+
+      <div class="news-box">
+        <!-- Podrías rellenar con artículos reales -->
+        <p>No hay noticias publicadas. Vuelve pronto para enterarte de las novedades.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTADO / PCU -->
+  <section id="estado" class="section-dark section-card">
+    <div class="container">
+      <h2>Estado del Servidor</h2>
+
+      <div class="server-card">
+        <div class="server-left">
+          <div class="status-dot" id="status-dot"></div>
+          <div>
+            <div class="status-text" id="status-text">Cargando... ONLINE</div>
+            <div class="players"><span id="players-count">0</span> / <span id="players-max">254</span></div>
+          </div>
+        </div>
+
+        <div class="server-progress">
+          <div class="progress-track"><div class="progress-bar" id="progress-bar" style="width:0%"></div></div>
+          <a class="btn btn-primary" id="btn-connect">Conectar ahora</a>
+        </div>
+      </div>
+
+      <p class="muted small">IP del servidor: <strong>144.217.19.104:7777</strong></p>
+    </div>
+  </section>
+
+  <!-- DESCARGAR -->
+  <section id="descargar" class="section-dark">
+    <div class="container">
+      <h2>Descargar Launcher</h2>
+      <p class="muted">Descarga el instalador oficial que incluye el cliente y el launcher Latam.</p>
+
+      <div class="download-actions">
+        <a id="download-link" class="btn btn-primary">Descargar Launcher Latam</a>
+        <a href="https://discord.gg/QCPevNnxHW" target="_blank" class="btn btn-ghost">Soporte / Donaciones</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NORMATIVAS (ancla) -->
+  <section id="normativas" class="section-dark">
+    <div class="container">
+      <h2>📜 Normativas Roleplay</h2>
+      <p class="muted">Lee las reglas oficiales del servidor.</p>
+
+      <!-- Puedes reemplazar el iframe por el contenido inline si prefieres -->
+      <div class="norm-box">
+        <iframe src="normativas/normativas.html" frameborder="0" style="width:100%; height:650px;"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-left">
+        <p>© 2025 LatamGamers Roleplay — Todos los derechos reservados.</p>
+      </div>
+      <div class="footer-right">
+        <a href="https://discord.gg/QCPevNnxHW" target="_blank" rel="noopener">Discord</a>
+        <a href="#">Foro</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
